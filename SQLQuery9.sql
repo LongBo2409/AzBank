@@ -13,8 +13,8 @@ CREATE TABLE Customer (
 -- Create the CustomerAccount table
 CREATE TABLE CustomerAccount (
     AccountNumber CHAR(9) PRIMARY KEY,
-    CustomerId INT,
-    Balance MONEY,
+    CustomerId INT NOT NULL, 
+    Balance MONEY NOT NULL,
     MinAccount MONEY,
     CONSTRAINT FK_CustomerAccount_CustomerId FOREIGN KEY (CustomerId) REFERENCES Customer(CustomerId)
 );
